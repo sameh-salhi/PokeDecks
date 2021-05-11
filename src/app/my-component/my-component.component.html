@@ -1,0 +1,12 @@
+
+<BR>
+<select [(ngModel)]="selectedPokeId">
+  <option [value]="poke.id" *ngFor="let poke of pokes">{{poke.name}}</option>
+</select>
+  <button (click)="go()">Voir les details</button>
+  <button (click)="addToMyPokemon()">Ajouter a mes Pokémons</button>
+  <button (click)="getMyPokemon()">Mes Pokémons</button>
+<BR>
+<div *ngIf="pokeDetail">
+  <app-pokedetail [detail] = "pokeDetail" ></app-pokedetail>
+</div>
